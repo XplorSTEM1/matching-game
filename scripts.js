@@ -78,6 +78,13 @@ function resetBoard() {
     let randomPos = Math.floor(Math.random() * 12);
     card.style.order = randomPos;
   });
+    //reset timer
+    second = 0;
+    minute = 0; 
+    hour = 0;
+    var timer = document.querySelector(".timer");
+    timer.innerHTML = "0 mins 0 secs";
+    clearInterval(interval);
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
