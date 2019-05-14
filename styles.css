@@ -7,7 +7,7 @@
 body {
   height: 100vh;
   display: flex;
-  background: #060AB2;
+  background: #ffffff;
 }
 .container {
     display: flex;
@@ -57,7 +57,7 @@ h1 {
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  background: #1C7CCC;
+  background: #baff18;
   backface-visibility: hidden;
 }
 
