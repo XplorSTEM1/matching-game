@@ -31,9 +31,6 @@ function flipCard() {
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-var len = isMatch.length;
-    if(len === 2){
-        moveCounter();
   isMatch ? disableCards() : unflipCards();
     }
 }
