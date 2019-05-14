@@ -4,25 +4,6 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
-startTimer();
-// @description game timer
-var second = 0, minute = 0; hour = 0;
-var timer = document.querySelector(".timer");
-var interval;
-function startTimer(){
-    interval = setInterval(function(){
-        timer.innerHTML = minute+"mins "+second+"secs";
-        second++;
-        if(second == 60){
-            minute++;
-            second=0;
-        }
-        if(minute == 60){
-            hour++;
-            minute = 0;
-        }
-    },1000);
-}
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
@@ -81,3 +62,5 @@ function resetBoard() {
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+
