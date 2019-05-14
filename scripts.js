@@ -3,9 +3,7 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-     let   second = 0;
-      let  minute = 0; 
-      let  hour = 0;
+
 startTimer();
 // @description game timer
 var second = 0, minute = 0; hour = 0;
