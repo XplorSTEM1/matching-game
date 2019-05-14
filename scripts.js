@@ -31,8 +31,11 @@ function flipCard() {
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-
+var len = isMatch.length;
+    if(len === 2){
+        moveCounter();
   isMatch ? disableCards() : unflipCards();
+    }
 }
 
 function disableCards() {
@@ -72,7 +75,7 @@ function moveCounter(){
     moves++;
     counter.innerHTML = moves;
     //start timer on first click
-    if(moves == 1){
+    if(moves == 0){
         second = 0;
         minute = 0; 
         hour = 0;
