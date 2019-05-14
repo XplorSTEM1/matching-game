@@ -6,8 +6,25 @@ let firstCard, secondCard;
      let   second = 0;
       let  minute = 0; 
       let  hour = 0;
-       let startTimer();
-
+startTimer();
+// @description game timer
+var second = 0, minute = 0; hour = 0;
+var timer = document.querySelector(".timer");
+var interval;
+function startTimer(){
+    interval = setInterval(function(){
+        timer.innerHTML = minute+"mins "+second+"secs";
+        second++;
+        if(second == 60){
+            minute++;
+            second=0;
+        }
+        if(minute == 60){
+            hour++;
+            minute = 0;
+        }
+    },1000);
+}
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
@@ -30,8 +47,8 @@ function flipCard() {
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+
   isMatch ? disableCards() : unflipCards();
-    }
 }
 
 function disableCards() {
@@ -55,33 +72,6 @@ function unflipCards() {
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
-
-    //reset timer
-    second = 0;
-    minute = 0; 
-    hour = 0;
-    var timer = document.querySelector(".timer");
-    timer.innerHTML = "0 mins 0 secs";
-    clearInterval(interval);
-}
-    
-// @description game timer
-var second = 0, minute = 0; hour = 0;
-var timer = document.querySelector(".timer");
-var interval;
-function startTimer(){
-    interval = setInterval(function(){
-        timer.innerHTML = minute+"mins "+second+"secs";
-        second++;
-        if(second == 60){
-            minute++;
-            second=0;
-        }
-        if(minute == 60){
-            hour++;
-            minute = 0;
-        }
-    },1000);
 }
 
 (function shuffle() {
