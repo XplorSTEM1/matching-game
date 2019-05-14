@@ -2,7 +2,9 @@ const cards = document.querySelectorAll('.memory-card');
 // declaring move variable
 let moves = 0;
 let counter = document.querySelector(".moves");
-
+ // declare modal
+ let modal = document.getElementById("popup1")
+ 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
