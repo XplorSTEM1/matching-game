@@ -73,7 +73,10 @@ h1 {
 	text-align: left;
 	margin-bottom: 10px;
 }
-
+.score-panel .restart {
+	float: right;
+	cursor: pointer;
+}
 .timer {
 	display: inline-block;
 	margin: 0 1rem;
