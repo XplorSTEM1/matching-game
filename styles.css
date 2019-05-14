@@ -64,23 +64,6 @@ h1 {
 .front-face {
   transform: rotateY(180deg);
 }
-/*
- * Styles for the Score Panel
- */
-
-
-.score-panel {
-	text-align: left;
-	margin-bottom: 10px;
-}
-.score-panel .restart {
-	float: right;
-	cursor: pointer;
-}
-.timer {
-	display: inline-block;
-	margin: 0 1rem;
-}
 
 
 /*
@@ -161,3 +144,41 @@ h1 {
 	border-radius: 5px;
 }
 
+/****** Media queries
+***************************/
+
+
+@media (max-width: 320px) {
+	.deck {
+		width: 85%;
+	}
+
+	.deck .card {
+		height: 4.7rem;
+		width: 4.7rem;
+	}
+}
+
+
+/* For Tablets and larger screens
+****************/
+
+@media (min-width: 768px) {
+	.container {
+		font-size: 22px;
+	}
+
+	.deck {
+		width: 660px;
+		height: 680px;
+	}
+
+	.deck .card {
+		height: 125px;
+		width: 125px;
+	}
+
+	.popup {
+		width: 60%;
+	}
+}
