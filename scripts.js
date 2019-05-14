@@ -1,13 +1,12 @@
 const cards = document.querySelectorAll('.memory-card');
-// declaring move variable
-let moves = 0;
-let counter = document.querySelector(".moves");
- // declare modal
- let modal = document.getElementById("popup1")
- 
+
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+     let   second = 0;
+      let  minute = 0; 
+      let  hour = 0;
+       let startTimer();
 
 function flipCard() {
   if (lockBoard) return;
@@ -56,9 +55,7 @@ function unflipCards() {
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
- // reset moves
-    moves = 0;
-    counter.innerHTML = moves;
+
     //reset timer
     second = 0;
     minute = 0; 
@@ -67,18 +64,7 @@ function resetBoard() {
     timer.innerHTML = "0 mins 0 secs";
     clearInterval(interval);
 }
-// @description count player's moves
-function moveCounter(){
-    moves++;
-    counter.innerHTML = moves;
-    //start timer on first click
-    if(moves == 0){
-        second = 0;
-        minute = 0; 
-        hour = 0;
-        startTimer();
-    }
-}
+    
 // @description game timer
 var second = 0, minute = 0; hour = 0;
 var timer = document.querySelector(".timer");
@@ -96,11 +82,6 @@ function startTimer(){
             minute = 0;
         }
     },1000);
-}
-// @desciption for user to play Again 
-function playAgain(){
-    modal.classList.remove("show");
-    resetBoard();
 }
 
 (function shuffle() {
