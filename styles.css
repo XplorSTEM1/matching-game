@@ -21,7 +21,9 @@ body {
 	height: 75px;
 }
 header {
-	position: relative;
+	top: 50px;
+	left: 300px;
+	position: absolute;
 	justify-content: center;
     	align-items: center;
 }
