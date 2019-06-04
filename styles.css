@@ -22,6 +22,8 @@ body {
 }
 header {
 	position: absolute;
+	justify-content: center;
+    	align-items: center;
 }
 h1 {
     font-family: 'Open Sans', sans-serif;
